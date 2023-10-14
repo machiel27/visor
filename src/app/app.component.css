@@ -1,0 +1,18 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.pageHeading{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 120px;
+    margin-top: 50px;
+}
+
+.mainText{
+    font-size: 45px;
+}

@@ -25,7 +25,7 @@ export class AgeDistributionComponent implements OnInit {
     },
     xAxis: {
       type: 'category',
-      data: ['18-25', '26-30', '31-35', '36-40', '41+']
+      data: ['18-25', '26-30', '31-35', '36-40']
     },
     yAxis: {
       type: 'value',
@@ -35,21 +35,7 @@ export class AgeDistributionComponent implements OnInit {
       {
         name: 'Age Distribution',
         type: 'bar',
-        data: [],
-        label: {
-          show: true,
-          position: 'top',
-          formatter: function (params) {
-            const winners = [
-              'List of winners for age group 18-25',
-              'List of winners for age group 26-30',
-              'List of winners for age group 31-35',
-              'List of winners for age group 36-40'
-            ];
-
-            return winners[params.dataIndex];
-          }
-        }
+        data: []
       }
     ]
   }
@@ -62,7 +48,7 @@ export class AgeDistributionComponent implements OnInit {
 
   getAgeDistributionData() {
     this.http.get<any[]>(this.baseUrl + 'WinningAge').subscribe((data) => {
-      const ageGroups = [0, 0, 0, 0, 0];
+      const ageGroups = [0, 0, 0, 0];
 
       data.forEach((item) => {
         const age = item.age;
@@ -73,10 +59,8 @@ export class AgeDistributionComponent implements OnInit {
           ageGroups[1]++;
         } else if (age >= 31 && age <= 35) {
           ageGroups[2]++;
-        } else if (age >= 36 && age <= 40) {
+        } else{
           ageGroups[3]++;
-        } else {
-          ageGroups[4]++;
         }
       });
 
