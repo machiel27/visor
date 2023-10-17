@@ -1,18 +1,37 @@
-.container{
+.container {
     display: flex;
     flex-direction: column;
-    gap: 50px;
-}
-
-.pageHeading{
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .pageHeading {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 120px;
-    margin-top: 50px;
-}
-
-.mainText{
-    font-size: 45px;
-}
+    margin-bottom: 40px;
+    margin-top: 20px;
+  }
+  
+  .mainText {
+    font-size: 4rem;
+    font-weight: 700;
+  }
+  
+  .subText {
+    font-size: 1rem;
+  }
+  
+  .mainSection {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .logo {
+    max-width: 150px;
+    margin: 0 10px;
+  }
+  
